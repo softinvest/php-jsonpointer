@@ -1,13 +1,13 @@
 # JSON Pointer for PHP
 
-![Test](https://github.com/raphaelstolt/php-jsonpointer/workflows/Test/badge.svg) [![Version](http://img.shields.io/packagist/v/php-jsonpointer/php-jsonpointer.svg?style=flat)](https://packagist.org/packages/php-jsonpointer/php-jsonpointer) [![PHP Version](http://img.shields.io/badge/php-7.4+-ff69b4.svg)](https://packagist.org/packages/php-jsonpointer/php-jsonpointer)
+ [![Version](http://img.shields.io/packagist/v/softinvest/php-jsonpointer.svg?style=flat)](https://packagist.org/packages/softinvest/php-jsonpointer) [![PHP Version](http://img.shields.io/badge/php-8.0+-ff69b4.svg)](https://packagist.org/packages/softinvest/php-jsonpointer)
 
 This is an implementation of [JSON Pointer](http://tools.ietf.org/html/rfc6901) written in PHP. Triggered by @janl's node.js [implementation](https://github.com/janl/node-jsonpointer) and being a bit bored.
 
 ### Installation via Composer
 
 ``` bash
-$ composer require php-jsonpointer/php-jsonpointer
+$ composer require softinvest/php-jsonpointer
 ```
 
 ### Usage
@@ -16,9 +16,9 @@ Now you can use JSON Pointer for PHP via the available Composer **autoload file*
 ``` php
 <?php require_once 'vendor/autoload.php';
 
-use Rs\Json\Pointer;
-use Rs\Json\Pointer\InvalidJsonException;
-use Rs\Json\Pointer\NonexistentValueReferencedException;
+use SoftInvest\Json\Pointer;
+use SoftInvest\Json\Pointer\InvalidJsonException;
+use SoftInvest\Json\Pointer\NonexistentValueReferencedException;
 
 $invalidJson = '{"Missing colon" null}';
 
