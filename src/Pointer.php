@@ -201,15 +201,15 @@ class Pointer
      */
     public function toArray():?array
     {
-        return is_string($this->json)?json_decode($this->json, true):$this->json;
+        return (array)(is_string($this->json)?json_decode($this->json, true):$this->json);
     }
 
     /**
      * @return array|false|string
      */
-    public function getJSON(): bool|array|string
+    public function getJSON($flag = JSON_UNESCAPED_UNICODE): bool|array|string
     {
-        return is_string($this->json)?$this->json:json_encode($this->json);
+        return is_string($this->json)?$this->json:json_encode($this->json, $flag);
     }
 
     /**
